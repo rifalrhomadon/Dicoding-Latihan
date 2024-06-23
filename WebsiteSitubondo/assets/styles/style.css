@@ -1,0 +1,135 @@
+/* Mengatur box-sizing untuk seluruh elemen */
+* {
+  box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0d1b2a; /* Warna latar belakang gelap */
+  color: #e0e1dd; /* Warna teks terang */
+}
+
+/* Gaya untuk heading */
+h2,
+h3 {
+  color: #c9d1ff; /* Warna teks heading */
+}
+
+/* Gaya untuk footer */
+footer {
+  padding: 20px;
+  color: #ffffff; /* Warna teks */
+  background-color: #1b263b; /* Warna latar belakang */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Gaya untuk link di navigasi */
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #ffffff; /* Warna teks */
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+/* Gaya untuk navigasi menggunakan Flexbox */
+nav {
+  display: flex;
+  justify-content: space-between; /* Menyebarkan ruang antara elemen */
+  align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+  background-color: #0d1b2a; /* Warna latar belakang */
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+/* Gaya untuk list di navigasi */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Gaya untuk item list di navigasi */
+nav li {
+  margin-right: 20px;
+}
+
+/* Gaya untuk header di profile */
+.profile header {
+  text-align: center;
+}
+
+/* Gaya untuk gambar fitur */
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid #3a506b; /* Warna border */
+}
+
+/* Gaya untuk gambar profile */
+.profile img {
+  max-width: 200px;
+  border: 2px solid #5bc0be; /* Warna border */
+  border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+}
+
+/* Gaya untuk card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #1c2541; /* Warna latar belakang */
+  color: #e0e1dd; /* Warna teks */
+}
+
+/* Gaya untuk jumbotron */
+.jumbotron {
+  font-size: 20px;
+  padding: 60px;
+  background: linear-gradient(45deg, #3a506b, #5bc0be); /* Gradien */
+  text-align: center;
+  color: #ffffff; /* Warna teks */
+}
+
+/* Gaya untuk main menggunakan Flexbox */
+main {
+  display: flex;
+  flex-wrap: wrap; /* Agar elemen membungkus pada layar kecil */
+  gap: 20px; /* Jarak antar elemen */
+  padding: 20px;
+}
+
+/* Gaya untuk konten */
+#content {
+  flex: 3; /* Menyediakan 3 bagian dari total ruang */
+}
+
+/* Gaya untuk aside */
+aside {
+  flex: 1; /* Menyediakan 1 bagian dari total ruang */
+}
+
+/* Media query untuk layar kecil */
+@media screen and (max-width: 1000px) {
+  main {
+    flex-direction: column; /* Ubah tata letak menjadi kolom */
+  }
+  
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
